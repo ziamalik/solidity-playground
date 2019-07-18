@@ -11,6 +11,7 @@ var ExceptionsContract = artifacts.require("ExceptionsContract");
 var MainContract = artifacts.require("MainContract");
 var InheritanceContract = artifacts.require("InheritanceContract");
 var EventsContract = artifacts.require("EventsContract");
+var StringContract = artifacts.require("StringContract")
 
 module.exports = function(deployer) {
     deployer.deploy(BasicDataType);
@@ -26,4 +27,5 @@ module.exports = function(deployer) {
     deployer.deploy(MainContract, 100);
     deployer.deploy(InheritanceContract, "Test");
     deployer.deploy(EventsContract);
+    deployer.deploy(StringContract);
 };
