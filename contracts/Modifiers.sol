@@ -8,9 +8,17 @@ contract Modifiers {
     }
 
     modifier verifyBidAmount(uint bidAmount) {
-        require (bidAmount >= minBidAmount);
-        _;
+        if (bidAmount >= minBidAmount) {
+            _;
+        }
+        else {
+            revert();
+        }
     }
 
-    
+    function bid(uint amount) public verifyBidAmount returns (bool) {
+        return true;
+    }
+
+
 }
