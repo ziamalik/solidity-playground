@@ -7,7 +7,16 @@ contract StructsContract {
         bytes32 lastName;
         uint8 houseNo;
         uint16 age;
+        Car car; // This is good. A struct can have another struct
+        //Family f; //This is Error. Cannot have recursive struct
     }
+
+    // Car
+    struct Car {
+        bytes32 model;
+    }
+
+
 
     // Creating an array of type family..which is a struct
     Family[] myFamily;
